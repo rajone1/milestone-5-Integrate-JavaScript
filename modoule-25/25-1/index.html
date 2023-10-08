@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <style>
+      li {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>well come to dome</h1>
+      <h1>hope you enjoy it</h1>
+      <ul>
+        <li>rezwan</li>
+        <li>shaon</li>
+        <li>rajshahi</li>
+      </ul>
+    </section>
+    <section>
+      <h1 id="fruits-title">fruits i like</h1>
+      <ul>
+        <li>banana</li>
+        <li>apple</li>
+        <li>pineapple</li>
+        <li>pomigranate</li>
+      </ul>
+      <h1 id="places-title">places i like visite</h1>
+    </section>
+    <ul>
+      <li class="importent-places">sundorban</li>
+      <li class="importent-places">katabon</li>
+      <li class="importent-places">sajek</li>
+      <li>coxasbajar</li>
+      <li></li>
+    </ul>
+
+    <section></section>
+
+    <script src="dom.js"></script>
+    <script>
+      const licollection = document.getElementsByTagName("li");
+      // console.log(licollection);
+
+      for (li of licollection) {
+        // console.log(li.innerText);
+      }
+
+      const allhtml = document.getElementsByTagName("h1");
+
+      for (h of allhtml) {
+        // console.log(h);
+        // console.log(h.innerText);
+      }
+
+      const places = document.getElementsByClassName("importent-places");
+      // console.log(places);
+      for (const findplace of places) {
+        // console.log(findplace);
+        console.log(findplace.innerText);
+      }
+
+      // change elemant
+      const changeTitle = document.getElementById("places-title");
+
+      changeTitle.innerText = "change place titale by js";
+      // quary selector
+
+      const places2 = document.querySelectorAll("importent-places");
+      console.log(places2);
+      for (const find of places2) {
+        console.log(find);
+      }
+    </script>
+  </body>
+</html>

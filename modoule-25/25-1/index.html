@@ -4,12 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="dom.js"></script>
     <title>Document</title>
-    <style>
-      li {
-        color: green;
-      }
-    </style>
   </head>
   <body>
     <section>
@@ -31,17 +27,15 @@
       </ul>
       <h1 id="places-title">places i like visite</h1>
     </section>
-    <ul>
-      <li class="importent-places">sundorban</li>
-      <li class="importent-places">katabon</li>
-      <li class="importent-places">sajek</li>
-      <li>coxasbajar</li>
-      <li></li>
-    </ul>
+    <section>
+      <ul>
+        <li class="importent-places">sundorban</li>
+        <li class="importent-places">katabon</li>
+        <li class="importent-places">sajek</li>
+        <li>coxasbajar</li>
+      </ul>
+    </section>
 
-    <section></section>
-
-    <script src="dom.js"></script>
     <script>
       const licollection = document.getElementsByTagName("li");
       // console.log(licollection);
@@ -71,10 +65,12 @@
       // quary selector
 
       const places2 = document.querySelectorAll("importent-places");
-      console.log(places2);
+      // console.log(places2);
       for (const find of places2) {
-        console.log(find);
+        // console.log(find);
       }
     </script>
+    <script src="stylejs.js"></script>
+    <script src="java1.js"></script>
   </body>
 </html>

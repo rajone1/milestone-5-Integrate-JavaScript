@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #button {
+        background-color: gold;
+        border-radius: 5px;
+        color: red;
+        font-weight: 700;
+      }
+
+      #comment {
+        background-color: #f4dfb6;
+        border-radius: 5px;
+      }
+      body {
+        background-color: lemonchiffon;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="text" type="text" />
+    <button id="btn">click</button>
+
+    <h1>share your fellings</h1>
+    <div id="comment-container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At reiciendis
+        eligendi inventore sint iure accusamus ratione similique quidem
+        repudiandae itaque.
+      </p>
+    </div>
+    <br />
+    <br />
+    <div>
+      <textarea name="" id="comment" cols="30" rows="5"></textarea><br /><br />
+      <button id="button">INSPIRE AND MOTIVATE YOUR SELF</button>
+    </div>
+
+    <script>
+      document.getElementById("button").addEventListener("click", function () {
+        const commentbox = document.getElementById("comment");
+
+        const newvalue = commentbox.value;
+
+        const main = document.getElementById("comment-container");
+
+        const addvalue = document.createElement("h2");
+
+        addvalue.innerText = newvalue;
+
+        main.appendChild(addvalue);
+        addvalue.style.color = "#FF4B91";
+        addvalue.style.backgroundColor = "#FFDFDF";
+        commentbox.value = "";
+      });
+
+      //  // step-1
+
+      //  document.getElementById("button").addEventListener("click", function () {
+      //    // step-2
+      //    const comment = document.getElementById("comment");
+
+      //    const takeValue = comment.value;
+
+      //    // step-3
+
+      //    const comcontainer = document.getElementById("comment-container");
+
+      //    const create = document.createElement("p");
+
+      //    create.innerText = takeValue;
+      //    comcontainer.appendChild(create);
+      //    // step-4
+
+      //    comment.value = "";
+      //  });
+    </script>
+
+    <script>
+      document.getElementById("text").addEventListener("keyup", function () {
+        console.log(event.target.value);
+      });
+
+      // document.getElementById("btn").addEventListener("mousemove", function () {
+      //   console.log("move mouse");
+      // });
+    </script>
+  </body>
+</html>

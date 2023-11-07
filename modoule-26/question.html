@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <h2>my name s</h2>
+      <h2>my name h</h2>
+      <h1>rest name</h1>
+      <h2>my name a</h2>
+      <h2>my name on</h2>
+    </section>
+    <div id="add">
+      <h1 id="click-handler">this is tomato</h1>
+      <button onclick="change()">buy now</button>
+      <button id="click1">click</button>
+    </div>
+    <br />
+    <div>
+      <input id="text" type="text" />
+
+      <button id="btn" disabled>click</button>
+    </div>
+
+    <script>
+      const h2s = document.querySelectorAll("h2");
+
+      for (const h2 of h2s) {
+        h2.style.color = "lightblue";
+        h2.style.border = "2px solid black";
+        h2.style.borderRadius = "30px";
+      }
+
+      //  2
+
+      const sections = document.querySelectorAll("section");
+
+      for (const section of sections) {
+        section.style.backgroundColor = "tomato";
+      }
+
+      //  5
+
+      function change() {
+        const change = document.getElementById("click-handler");
+        change.innerText = "well come";
+        change.style.color = "black";
+      }
+
+      //  option2
+
+      document.getElementById("click1").addEventListener("click", function () {
+        const change = document.getElementById("click-handler");
+
+        change.innerText = "Well come";
+        change.style.color = "blue";
+      });
+
+      //  6 problem
+
+      document.getElementById("text").addEventListener("keyup", function (e) {
+        const get = e.target.value;
+        //    console.log(get);
+
+        const btn = document.getElementById("btn");
+        if (get === "email" || get === "Email") {
+          btn.removeAttribute("disabled");
+        } else {
+          btn.setAttribute("disabled", true);
+        }
+      });
+    </script>
+  </body>
+</html>

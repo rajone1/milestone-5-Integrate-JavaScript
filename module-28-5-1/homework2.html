@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <h1>price: $ <span id="amount">1000</span></h1>
+      <div>
+        <h1 style="display: inline">coupon:</h1>
+        <input
+          id="inputfield"
+          type="text"
+          placeholder="please write secret code"
+        />
+      </div>
+      <br />
+      <button id="btn">Apply</button>
+
+      <h1>please pay:$ <span id="discount-amount">1000</span></h1>
+    </section>
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        const amount = document.getElementById("amount");
+        const mainamountstring = amount.innerText;
+        const mainamount = parseFloat(mainamountstring);
+        const allDiscount = (mainamount * 70) / 100;
+
+        //
+        const discountAmount = document.getElementById("discount-amount");
+
+        const discountString = discountAmount.innerText;
+
+        const discount = parseFloat(discountAmount);
+        //    discountAmount.innerText = allDiscount;
+
+        const input = document.getElementById("inputfield");
+        const inputfield = input.value;
+        input.value = "";
+
+        if (inputfield == "d") {
+          discountAmount.innerText = allDiscount;
+        } else {
+          discountAmount.innerText = mainamount;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -27,3 +27,11 @@ document.getElementById("generate-pin").addEventListener("click", function () {
 
 // generatepin();
 // console.log(generatepin());
+
+// calculator part
+
+document
+  .getElementById("calculator")
+  .addEventListener("click", function (event) {
+    console.log(event.target.innerText);
+  });
